@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+// Import the SafeAreaView and Text components from the React Native library
+import { SafeAreaView, Text } from "react-native";
+import TimeOfDay from "./components/TimeOfDay/TimeOfDay";
+
+// Define a new class called "App" that extends the Component class from React
+class App extends Component {
+  // Define a constructor function that takes "props" as its argument
+  constructor(props) {
+    // Call the constructor of the parent class using the "super" keyword
+    super(props);
+    this.state = {};
+  }
+
+  // Define a "render" method that returns a JSX element
+  render() {
+    return (
+      // Render a SafeAreaView component that contains a Text component with the text "Hello World!"
+      <SafeAreaView>
+        {/* <Text style={{marginTop:20}} onPress={() => this.setState({ name: "Nata" })}>
+          Hello, {this.state?.name}!
+        </Text> */}
+        <TimeOfDay/>
+      </SafeAreaView>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
