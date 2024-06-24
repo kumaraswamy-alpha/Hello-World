@@ -3,6 +3,9 @@ import React, { Component } from "react";
 // Import the SafeAreaView and Text components from the React Native library
 import { SafeAreaView, Text } from "react-native";
 import TimeOfDay from "./components/TimeOfDay/TimeOfDay";
+import TextInputs from "./components/TextInput";
+import Scroll from "./components/Scroll";
+import ButtonForm from "./components/ButtonForm";
 
 // Define a new class called "App" that extends the Component class from React
 class App extends Component {
@@ -21,7 +24,10 @@ class App extends Component {
         {/* <Text style={{marginTop:20}} onPress={() => this.setState({ name: "Nata" })}>
           Hello, {this.state?.name}!
         </Text> */}
-        <TimeOfDay/>
+        {/* <TimeOfDay/> */}
+        {/* <TextInputs/>
+        <Scroll/> */}
+        <ButtonForm />
       </SafeAreaView>
     );
   }
